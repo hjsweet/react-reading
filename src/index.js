@@ -28,7 +28,7 @@ class App extends Component{
           <Header className='header'><AppHeader/> <Login className='login'></Login></Header>
           <Content className='content'>
             <Routes>
-              <Route path='/:id?' element={<IntroList/>}/>
+              <Route path='/:id' element={<IntroList/>}/>
               <Route path='/vip' element={<Vip/>}/>
               <Route path='/detail' element={<Detail />}/>
             </Routes>
