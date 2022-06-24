@@ -1,0 +1,17 @@
+.app-header-logo{
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+.app-header-title{
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: palevioletred;
+}
+.app-header-menu{
+  /* float: left; */
+  margin-top: 10px;
+  width: 900px;
+}

@@ -1,0 +1,23 @@
+#root{
+  height: 100%;
+}
+.header{
+  background-color: white;
+  height: 80px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.content{
+  min-height: 600px;
+  height: 600px;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+}
+.footer{
+  text-align: center;
+  background-color: pink;
+  color: white;
+}

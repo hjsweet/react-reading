@@ -1,0 +1,21 @@
+/* $text-color:red */
+
+.vip{
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  /* color: $text-color; */
+  font-size: 30px;
+  /* // @include singleline-ellipsi(600px);  用include使用mixin语法,并且携带width的参数 */
+}
+/* 
+// mixin语法,还可以携带参数，参数用$width来表示
+// 举例 单行省略号的mixin
+// @mixin singleline-ellipsis($width) {
+//   width: $width;
+//   overflow: hidden;
+//   white-space: nowrap;
+//   text-overflow: ellipsis;
+// } */
