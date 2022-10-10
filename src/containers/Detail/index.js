@@ -7,8 +7,8 @@ class Detail extends Component{
   constructor(props){
     super(props);
     this.state = {
-      title:'',
-      content:''
+      title:'2222',
+      content:'3333'
     }
   }
   render(){

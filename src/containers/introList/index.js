@@ -33,6 +33,7 @@ class introList extends Component{
     }
   }
   render(){
+    alert(2222)
     console.log('打印ID',this.props.match.params.id)
     return(
     <List
@@ -44,7 +45,7 @@ class introList extends Component{
            {item.title}
           {/* 给list加link，让其携带id跳到对应的detail页面 */}
           {/* <Link to={`/detail/${item.id}`}>
-           
+
           </Link> */}
         </List.Item>
       )}

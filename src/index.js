@@ -29,6 +29,7 @@ class App extends Component{
           <Content className='content'>
             <Routes>
               <Route path='/:id?' element={<IntroList/>}/>
+              {/*<Route path='/:id?' element={<IntroList/>}/>*/}
               <Route path='/vip' element={<Vip/>}/>
               <Route path='/detail' element={<Detail />}/>
             </Routes>

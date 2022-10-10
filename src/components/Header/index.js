@@ -33,12 +33,17 @@ class AppHeader extends Component{
         //   type:"car",
         //   title:"行"
         // },
-      ]
+      ],
+        menuJson:{
+          1:'Detail',
+          2:'Vip'
+        }
     }
   }
   // 遍历菜单的方法，用map
   getMenuItem(){
-    console.log('打印菜单',this.state.menuList)
+    console.log('打印菜单',this.state.menuList,this.state.menuJson)
+      let {menuJson}=this.state
     // 遍历之后还需要再return一下
     return this.state.menuList.map(item =>{
       return(
@@ -47,16 +52,19 @@ class AppHeader extends Component{
           <Link to={`/${item.id}`}>
             {item.title}
           </Link>
+          {/*<Link to={`/${menuJson[item.id]}`}>*/}
+          {/*  {item.title}*/}
+          {/*</Link>*/}
         </Menu.Item>
       )
     })
   }
 
-  //在componentDidMount生命周期函数里执行ajax请求 
+  //在componentDidMount生命周期函数里执行ajax请求
   componentDidMount(){
     axios.get('http://www.dell-lee.com/react/api/header.json')
     .then((res)=>{
-      // console.log(res.data.data)
+      console.log(res.data.data,'componentDidMount')
       // 用setState改变menuList的值
       this.setState({
         menuList:res.data.data

@@ -10,8 +10,8 @@ class Login extends Component{
   constructor(props){
     super(props);
     this.showModal = this.showModal.bind(this)
-    this.hideModal = this.hideModal.bind(this) 
-    this.changeUser= this.changeUser.bind(this) 
+    this.hideModal = this.hideModal.bind(this)
+    this.changeUser= this.changeUser.bind(this)
     this.changePassword = this.changePassword.bind(this)
     this.checkLogin = this.checkLogin.bind(this)
     this.logOut = this.logOut.bind(this)
@@ -92,7 +92,7 @@ class Login extends Component{
             login:false
           })
         }
-       
+
       }
     )
   }
@@ -108,9 +108,13 @@ class Login extends Component{
           <Button  className="login-btn" onClick={this.logOut}>退出</Button>:
           <Button type="primary" onClick={this.showModal}>登录</Button>
         }
-        <Link to={'./vip'}>
-          <Button type="primary" style={{marginLeft:10}}>Vip</Button>
-        </Link>
+        {
+          login &&
+            <Link to={'./vip'}>
+              <Button type="primary" style={{marginLeft:10}}>Vip</Button>
+            </Link>
+        }
+
         <Modal title="登录"  visible={this.state.modal} onOk={this.checkLogin} onCancel={this.hideModal}>
           <Input placeholder="请输入用户名"  style={{marginBottom:10}} value={this.state.user} onChange={this.changeUser}></Input>
           <Input placeholder="请输入密码" type="password" value={this.state.password} onChange={this.changePassword}></Input>
